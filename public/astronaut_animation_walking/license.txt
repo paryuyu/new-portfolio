@@ -1,0 +1,11 @@
+Model Information:
+* title:	Astronaut animation walking
+* source:	https://sketchfab.com/3d-models/astronaut-animation-walking-0ce0e75616b842cebd7e811eb22c3829
+* author:	Al-Deezel (https://sketchfab.com/Al-dezel)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Astronaut animation walking" (https://sketchfab.com/3d-models/astronaut-animation-walking-0ce0e75616b842cebd7e811eb22c3829) by Al-Deezel (https://sketchfab.com/Al-dezel) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

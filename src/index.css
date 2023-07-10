@@ -1,0 +1,211 @@
+@import url('https://rsms.me/inter/inter.css');
+
+html,
+body,
+#root,
+.bg {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  color:white;
+}
+
+#root{
+  position:relative;
+}
+
+body {
+  background: #171717;
+  font-family: 'Inter var', sans-serif;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 5em;
+  line-height: 0.6em;
+  letter-spacing: -2px;
+  margin-top: 3rem;
+  margin-left: 3rem;
+  color: peru;
+  text-align: left;
+  display:flex;
+  flex-direction:column;
+  gap:2rem;
+  z-index:999
+}
+
+h1>.white{
+  color:#fff;
+}
+
+h1>.sub_title{
+  color:peru;
+  font-weight: 700;
+  font-size: 0.7em;
+  line-height: 1em;
+  letter-spacing: -2px;
+}
+
+h1 > span {
+  white-space: pre;
+}
+
+
+.box {
+  width: 40vmin;
+  height: 25vmin;
+  text-align: center;
+  font-weight: bold;
+  border:3px solid #ffffff;
+  color:#ffffff;
+}
+
+.main_section{
+  display:flex;
+  flex-direction:column;
+  gap:6rem;
+  height:100vh;
+  display:flex;
+  align-items:start;
+  
+}
+
+.box_title{
+  font-family: 'Inter var', sans-serif;
+  font-weight: 900;
+
+}
+
+.my-content{
+  width:200px;
+  background:red;
+  height:5rem;
+}
+
+.project_section{
+  position:relative;
+  z-index:999;
+  height:100vh;
+  width:100vw;
+  cursor:default;
+}
+
+.project_section>h1{
+  color:white; 
+  padding:5rem 0rem 0rem 5rem;
+  margin:0;
+}
+.project_section>p{
+  padding-top:1rem;
+  padding-left:5rem;
+  padding-bottom:2rem;
+  font-weight:100;
+}
+
+.cardbox{
+  background:#a5c5e050;
+  width:20rem;
+  height:20rem;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-sizing:border-box;
+  padding:20px;
+  cursor:pointer;
+}
+
+.cardcontainer{
+  display:flex;
+  gap:1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items:center;
+}
+
+.modal {
+  position: absolute;
+  background:#fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width:60vw;
+  height:60vh;
+  color:#333;
+  padding:20px;
+  box-sizing:border-box;
+  border:5px solid #a9c8e2a3;
+  z-index: 11;
+  display:flex;
+  flex-direction:column;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 10;
+}
+
+.modal>button{
+  border:0;
+  font-size:20px;
+  position:absolute;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:5px;
+  right:10px;
+  top: 10px;
+  border-radius:10px;
+  background:#a9c8e2a3;
+  cursor:pointer;
+  color:#fff;
+}
+
+
+.modal>button:hover{
+  background:#fff;
+  color:#ddd;
+}
+
+.about_section, .skill_section{
+  width:100vw;
+  height:100vh;
+}
+
+.navbar{
+  margin-top:20px;
+  z-index:999;
+  width:95%;
+  display:flex;
+  justify-content: end;
+
+}
+
+.listbox{
+  list-style-type: none;
+  display:flex;
+  align-items:center;
+  gap:2rem;
+  font-weight:600;
+}
+
+
+.listbox>li>a{
+  text-decoration:none;
+  color:white;
+}
+
+.skill_section>h1,
+.about_section>h1{
+  padding: 5rem 0rem 0rem 5rem
+}
+
+.about_container{
+  display:flex;
+  gap:2rem;
+  padding:2rem;
+}
