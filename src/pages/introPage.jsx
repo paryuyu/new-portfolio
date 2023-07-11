@@ -11,7 +11,7 @@ const IntroPage = () => {
       <span className="sub_title ">Welcome to my portfolio site!</span>
     </h1>
     <PlanetCanvas />
-
+    
   </section>
 };
 
