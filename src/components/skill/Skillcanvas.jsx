@@ -1,12 +1,14 @@
-import { Cloud, ContactShadows, Image, OrbitControls, PerspectiveCamera, RenderTexture, Sky, Stage, Stars, Text } from "@react-three/drei";
+import { Cloud, ContactShadows, OrbitControls, PerspectiveCamera, RenderTexture, Text } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { useRef } from "react";
+import CanvasLoader from "../canvas/Loader";
 
 const SkillCanvas = ({onSkill}) => {
 
 
   return <Canvas camera={{ position: [5, 5, 5], fov: 25 }} style={{ height: '90vh', zIndex: 0 , position:'absolute', top:'2rem'}}>
+    <Suspense fallback={<CanvasLoader/>}>
     <ambientLight />
     <directionalLight intensity={0.5} />
     <CubeObj onSkill={onSkill} />
@@ -14,6 +16,7 @@ const SkillCanvas = ({onSkill}) => {
     />
     <ContactShadows frames={1} position={[0, -0.5, 0]} blur={3} color="orange" />
     <OrbitControls minPolarAngle={1} maxPolarAngle={Math.PI / 1.1} />
+    </Suspense>
   </Canvas>;
 };
 

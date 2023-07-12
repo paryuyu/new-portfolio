@@ -1,6 +1,6 @@
 import { Canvas } from "@react-three/fiber";
-import StarsBackground from "./stars";
-import IntroPage from "../pages/introPage";
+import StarsBackground from "../canvas/stars";
+import IntroPage from "../../pages/introPage";
 const MainBackground = () => {
 
 

@@ -1,5 +1,5 @@
-import NavBar from "../components/NavBar";
-import PlanetCanvas from "../components/PlanetCanvas";
+import NavBar from "../components/nav/Navbar";
+import PlanetCanvas from "../components/canvas/PlanetCanvas";
 const IntroPage = () => {
 
 

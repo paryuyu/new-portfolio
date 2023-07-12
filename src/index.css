@@ -111,14 +111,24 @@ h1 > span {
 }
 
 .cardbox{
-  background:#a5c5e050;
+  background:#40404070;
   width:20rem;
   height:20rem;
-  border: 2px solid #ddd;
-  border-radius: 10px;
+  display:flex;
+  flex-direction:column;
+  /* justify-content:center; */
+  align-items:center;
   box-sizing:border-box;
   padding:20px;
   cursor:pointer;
+  gap:2rem;
+}
+.cardbox_title{
+  margin-top:2rem;
+}
+.cardbox_desc{
+  font-weight:100;
+  text-align:center;
 }
 
 .cardcontainer{
@@ -193,6 +203,7 @@ h1 > span {
   margin:0;
   padding:0;
 }
+
 .about_section{
   gap:5rem;
   position:relative;
@@ -243,7 +254,7 @@ h1 > span {
   position:absolute;
   top:50%;
   left:50%;
-  transform:translate(-50%,-50%);
+  transform:translate(-50%,-40%);
 }
 
 
@@ -270,7 +281,11 @@ h1 > span {
   display:flex;
   justify-content:center;
   align-items:center;
+  gap:5px;
+  font-weight:700;
+  color:#474747;
   box-sizing:border-box;
+
 }
 
 .selected{
@@ -283,7 +298,7 @@ h1 > span {
 
 .main_tab_screen>.content_box{
   font-family: 'S-CoreDream-3Light';
-  background:#ffffff30;
+  background:#30303050;
   width:100%;
   min-height:50vh;
   border-radius:10px;
@@ -291,10 +306,26 @@ h1 > span {
   display:flex;
   flex-direction:column;
   justify-content:center;
-  padding:1rem;
+  padding:5rem;
   box-sizing:border-box;
-  border:2px solid #333;
   color:#fff;
+  line-height:2;
+  text-align:center;
+  overflow-y: scroll;
+}
+
+.main_tab_screen>.content_box::-webkit-scrollbar {
+  width: 0.5rem; /* 스크롤바의 너비 */
+}
+.main_tab_screen>.content_box::-webkit-scrollbar-track {
+  background: #f1f1f1; /* 스크롤바 트랙의 배경색 */
+}
+.main_tab_screen>.content_box::-webkit-scrollbar-thumb {
+  background: #555; /* 스크롤바에 호버될 때의 색상 */
+}
+
+.main_tab_screen>.content_box::-webkit-scrollbar-thumb:hover {
+  background: #888; /* 스크롤바의 색상 */
 }
 
 .description_page{
@@ -314,6 +345,7 @@ h1 > span {
   z-index:999;
   width:90%;
   min-height:80vh;
+  max-height:80vh;
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);
@@ -326,17 +358,9 @@ h1 > span {
   cursor:default;
 }
 
-.skill_modal>h1{
-  color:#05ff05;
-  cursor:pointer;
-}
 
 
-.skill_modal>nav{
-  background:red;
-  margin:0;
-  width:50%;
-}
+
 
 .description_section{
   display:flex;
@@ -348,8 +372,9 @@ h1 > span {
   flex-direction:row;
   gap:0px;
   margin:0;
-  padding:5rem 0rem 0rem 5rem;
   cursor:default;
+  margin: 0 auto;
+  margin-top:5rem;
 }
 
 .about_headtext>h1{
@@ -370,6 +395,19 @@ h1 > span {
   z-index:999;
 }
 
+.scroll_up_outline{
+  height:3rem;
+  width:2rem;
+  border-radius:5rem;
+  border:2.5px solid #d0d0d0;
+  display:flex;
+  justify-content:center;
+  position:absolute;
+  top:27%;
+  right:4rem;
+  z-index:999;
+}
+
 .scroll_inline{
   height:20px;
   background:#ffffff95;
@@ -379,9 +417,17 @@ h1 > span {
   margin-top:20px;
 }
 
+.scroll_up_inline{
+  height:20px;
+  background:#ffffff95;
+  width:25px;
+  border-radius:50%;
+  margin:5px;
+  margin-top:5px;
+}
+
 .scroll_container{
   z-index:999;
-  /* position:relative; */
 }
 
 
@@ -392,6 +438,17 @@ h1 > span {
 .scroll_typo{
   position:absolute;
   top:4rem;
+  width:6rem;
+  left:-2rem;
+  text-align:center;
+  color:#ddd;
+  text-decoration:none;
+  font-weight:100;
+}
+
+.scroll_up_typo{
+  position:absolute;
+  top:-3rem;
   width:6rem;
   left:-2rem;
   text-align:center;
@@ -433,11 +490,124 @@ h1 > span {
 }
 
 .icon_up_box{
-
   text-align:center;
    z-index: 800;
    position:absolute;
    right:4.5rem;
    top:20%;
  
+}
+
+.skill_description_outline{
+  display:flex;
+  justify-content:space-around;
+  gap:2rem;
+  height:100%;
+}
+
+.skill_description_box{
+  flex:1;
+  height:100%;
+}
+
+.level_box{
+  width:100%;
+  background:#303030;
+  height:2px;
+}
+
+.level{
+  height:100%;
+  background:#05ff05;
+}
+
+.skill_item_box{
+  padding:1rem;
+  height:100%;
+}
+
+.skill_category_box{
+  background:#00000060;
+  border-bottom: 1px dashed #ffffff50;
+  padding-bottom:1rem;
+}
+
+.skill_category_box:last-child{
+  border-bottom: 0px;
+  padding-bottom:1rem;
+}
+
+
+.category{
+  text-align: end;
+  padding: 1rem 1rem 1rem 0rem;
+  color: #05ff05;
+  font-style: italic;
+  font-weight: 900;
+  border-bottom: 1px dashed #05ff054f;
+}
+
+
+.category>h2{
+  margin:0;
+}
+
+.category_span{
+  font-weight:100;
+  color:#fff;
+}
+
+.skill_item_title{
+  text-decoration:underline;
+}
+
+.modal_close{
+  background:#d1d1d150;
+  padding:1rem;
+  border:0;
+  border-radius:50%;
+  font-size:3rem;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#303030;
+  cursor:pointer;
+}
+
+.modal_close:hover{
+  background:#303030;
+  color:#f0f0f050;
+}
+
+.modal_head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:3rem 2rem;
+}
+
+.skill_modal>.modal_head>h1{
+  color:#05ff05;
+  cursor:pointer;
+  margin:0;
+}
+
+
+.skill_modal::-webkit-scrollbar {
+  width: 0.5rem; /* 스크롤바의 너비 */
+}
+.skill_modal::-webkit-scrollbar-track {
+  background: #f1f1f1; /* 스크롤바 트랙의 배경색 */
+}
+.skill_modal::-webkit-scrollbar-thumb {
+  background: #555; /* 스크롤바에 호버될 때의 색상 */
+}
+
+.skill_modal::-webkit-scrollbar-thumb:hover {
+  background: #888; /* 스크롤바의 색상 */
+}
+
+.skill_item_description{
+  line-height:1.6;
+  font-family: 'S-CoreDream-3Light';
 }

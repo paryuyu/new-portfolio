@@ -1,4 +1,5 @@
-import MainBackground from "./components/MainBackground";
+
+import MainBackground from "./components/main/MainBackground";
 import AboutPage from "./pages/aboutPage";
 import ProjectPage from "./pages/projectPage";
 import SkillPage from "./pages/skillPage";

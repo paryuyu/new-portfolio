@@ -1,4 +1,4 @@
-import { OrbitControls, Preload, SpotLight, useGLTF } from "@react-three/drei";
+import { OrbitControls, Preload, SpotLight, Text, useGLTF } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 import { Suspense } from "react";
@@ -16,14 +16,14 @@ const Planet = () => {
   return <mesh ref={meshRef}>
     <hemisphereLight intensity={0.15} groundColor="#333" />
     <SpotLight
-      position={[100, 100, 20]}
+      position={[10, 10, 20]}
       angle={4}
       penumbra={1}
       intensity={1}
       castShadow
       shadow-mapSize={1024} />
     <pointLight intensity={100} />
-    <primitive object={earth.scene} scale={2} position={[5, -1, 1]} rotation={[0, 0, 0]} />
+    <primitive object={earth.scene} scale={2} position={[5, -1, 1]}  />
   </mesh>;
 };
 
@@ -32,7 +32,7 @@ const PlanetCanvas = () => {
     <Canvas
       style={{
         height: '90vh',
-        width:'100%',
+        width: '95vw',
         position: 'absolute',
         top: 0,
         zIndex: 0
@@ -46,6 +46,7 @@ const PlanetCanvas = () => {
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} rotateSpeed={0.2} />
         <Planet />
+
       </Suspense>
       <Preload all />
     </Canvas>
