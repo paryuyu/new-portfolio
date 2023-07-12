@@ -1,6 +1,7 @@
 import { Canvas } from "@react-three/fiber";
 import StarsBackground from "./stars";
 import IntroPage from "../pages/introPage";
+import CustomScrollBtn from "./CustomScrollBtn";
 const MainBackground = () => {
 
 
@@ -10,7 +11,7 @@ const MainBackground = () => {
         <StarsBackground />
       </Canvas>
       <IntroPage />
-  
+      <CustomScrollBtn>intro</CustomScrollBtn>
     </div>)
 };
 

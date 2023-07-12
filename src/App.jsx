@@ -9,9 +9,11 @@ const App = () => {
   return (
     <>
       <MainBackground />
+      <div className="description_page">
       <AboutPage/>
-      <ProjectPage />
       <SkillPage/>  
+      <ProjectPage />
+      </div>
     </>
   )
 };

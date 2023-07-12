@@ -1,11 +1,7 @@
 
-import { useAnimations, useFBX, useGLTF } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
 import { AnimatePresence, motion } from "framer-motion";
-import { Suspense, useState } from "react";
-import { Clock } from "three";
-import * as THREE from "three";
-import { useEffect } from "react";
+import { useState } from "react";
+import HeadingTypo from "../components/headingTypo";
 
 const aboutMeContent = [{
   tab: '자기소개',
@@ -35,8 +31,17 @@ const AboutPage = () => {
 
 
   return <section className="about_section" id="about-section">
-
-    <h1>About me</h1>
+    <div className="about_headtext">
+    <HeadingTypo>I</HeadingTypo>
+    <HeadingTypo>n</HeadingTypo>
+    <HeadingTypo>t</HeadingTypo>
+    <HeadingTypo>r</HeadingTypo>
+    <HeadingTypo>o</HeadingTypo>
+    <HeadingTypo>d</HeadingTypo>
+    <HeadingTypo>u</HeadingTypo>
+    <HeadingTypo>c</HeadingTypo>
+    <HeadingTypo>e</HeadingTypo>
+    </div>
     <div className="main_tab_screen">
       <nav>
         <ul>
@@ -45,15 +50,14 @@ const AboutPage = () => {
           })}
         </ul>
       </nav>
-
       <AnimatePresence>
         <motion.div
           className="content_box"
           key={selectedTab ? selectedTab?.tab : "empty"}
-          initial={{ y: 10, opacity: 0 }}
+          initial={{ y: 0.5, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          // exit={{ y: -10, opacity: 0 }}
-          transition={{ duration: 0.5 }}>
+          transition={{ duration: 1 }}
+          >
           {selectedTab ? <div dangerouslySetInnerHTML={{__html : selectedTab.tabContent}} /> : "😋"}
         </motion.div>
       </AnimatePresence>
