@@ -37,7 +37,7 @@ h1 {
   display:flex;
   flex-direction:column;
   gap:2rem;
-  z-index:999
+  z-index:10;
 }
 
 h1>.white{
@@ -90,10 +90,11 @@ h1 > span {
 
 .project_section{
   position:relative;
-  z-index:999;
+  z-index:500;
   min-height:100vh;
   min-width:100vw;
   cursor:default;
+ padding-bottom:2rem; 
 }
 
 .project_section>h1{
@@ -194,13 +195,16 @@ h1 > span {
 }
 .about_section{
   gap:5rem;
+  position:relative;
 }
+
 .navbar{
   margin-top:20px;
   z-index:999;
   width:95%;
   display:flex;
   justify-content: end;
+  position:fixed;
 
 }
 
@@ -236,7 +240,10 @@ h1 > span {
   flex-direction:column;
   border-radius:10px;
   color:#333;
-  margin: 0 auto;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
 }
 
 
@@ -351,15 +358,15 @@ h1 > span {
 }
 
 .scroll_outline{
-  height:4rem;
+  height:3rem;
   width:2rem;
   border-radius:5rem;
-  border:3px solid #d0d0d0;
+  border:2.5px solid #d0d0d0;
   display:flex;
   justify-content:center;
   position:absolute;
-  top:40%;
-  right:2rem;
+  bottom:20%;
+  right:4rem;
   z-index:999;
 }
 
@@ -369,4 +376,68 @@ h1 > span {
   width:25px;
   border-radius:50%;
   margin:5px;
+  margin-top:20px;
+}
+
+.scroll_container{
+  z-index:999;
+  /* position:relative; */
+}
+
+
+.wrap_div{
+  position:relative;
+}
+
+.scroll_typo{
+  position:absolute;
+  top:4rem;
+  width:6rem;
+  left:-2rem;
+  text-align:center;
+  color:#ddd;
+  text-decoration:none;
+  font-weight:100;
+}
+
+.scroll_down_icon{
+  font-size:2rem;
+  box-sizing:border-box;
+  color:#fff;
+
+}
+
+.scroll_down_icon:hover{
+  background:#d0d0d030;
+  padding:3px;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+
+.icon_box{
+ text-align:center;
+  z-index: 800;
+  position:absolute;
+  right:4rem;
+  bottom:20%;
+}
+
+.icon_text{
+  font-weight:100;
+}
+
+
+.icon_text{
+  font-weight:100;
+}
+
+.icon_up_box{
+
+  text-align:center;
+   z-index: 800;
+   position:absolute;
+   right:4.5rem;
+   top:20%;
+ 
 }

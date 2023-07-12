@@ -1,6 +1,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
+import CustomScrollBtn from "../components/scroll/CustomScrollBtn";
 import HeadingTypo from "../components/headingTypo";
 
 const aboutMeContent = [{
@@ -32,15 +33,15 @@ const AboutPage = () => {
 
   return <section className="about_section" id="about-section">
     <div className="about_headtext">
-    <HeadingTypo>I</HeadingTypo>
-    <HeadingTypo>n</HeadingTypo>
-    <HeadingTypo>t</HeadingTypo>
-    <HeadingTypo>r</HeadingTypo>
-    <HeadingTypo>o</HeadingTypo>
-    <HeadingTypo>d</HeadingTypo>
-    <HeadingTypo>u</HeadingTypo>
-    <HeadingTypo>c</HeadingTypo>
-    <HeadingTypo>e</HeadingTypo>
+      <HeadingTypo>I</HeadingTypo>
+      <HeadingTypo>n</HeadingTypo>
+      <HeadingTypo>t</HeadingTypo>
+      <HeadingTypo>r</HeadingTypo>
+      <HeadingTypo>o</HeadingTypo>
+      <HeadingTypo>d</HeadingTypo>
+      <HeadingTypo>u</HeadingTypo>
+      <HeadingTypo>c</HeadingTypo>
+      <HeadingTypo>e</HeadingTypo>
     </div>
     <div className="main_tab_screen">
       <nav>
@@ -57,11 +58,12 @@ const AboutPage = () => {
           initial={{ y: 0.5, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
-          >
-          {selectedTab ? <div dangerouslySetInnerHTML={{__html : selectedTab.tabContent}} /> : "😋"}
+        >
+          {selectedTab ? <div dangerouslySetInnerHTML={{ __html: selectedTab.tabContent }} /> : "😋"}
         </motion.div>
       </AnimatePresence>
     </div>
+    <CustomScrollBtn/>
   </section>;
 };
 
