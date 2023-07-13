@@ -73,8 +73,8 @@ h1 > span {
   height:100vh;
   display:flex;
   align-items:start;
-  
 }
+
 
 .box_title{
   font-family: 'Inter var', sans-serif;
@@ -90,7 +90,7 @@ h1 > span {
 
 .project_section{
   position:relative;
-  z-index:500;
+  z-index:50;
   min-height:100vh;
   min-width:100vw;
   cursor:default;
@@ -603,12 +603,18 @@ h1 > span {
   padding:0.5rem 1rem;
   border-radius:10px;
 }
+.project_datebox{
+  display:flex;
+  align-items:center;
+  gap:0.7rem;
 
+}
 .project_skill_box{
   display:flex;
   flex-wrap:wrap;
-  gap:1rem;
-  align-items:center;
+  flex-direction:column;
+  gap:0.5rem;
+  align-items:start;
 }
 
 .project_modal_btn_head{
@@ -666,14 +672,12 @@ h1 > span {
 
 .project_desc_section{
   background:#35353550;
-  /* background:#ffffff50; */
   padding:1rem;
   flex:1;
 }
 
 .project_img_section{
   background:#30303080;
-  /* width:100%; */
   flex:1;
 }
 
@@ -754,4 +758,26 @@ h1 > span {
   object-fit:contain;
   min-width:50%;
   min-height: 50%;
+}
+
+
+.contact_section{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:1rem;
+
+}
+.contact-icon{
+  background:#d0d0d050;
+  font-size:3rem;
+  padding:1rem;
+  border-radius:30%;
+  cursor:pointer;
+}
+
+
+.contact-icon:hover{
+  background:#ffffff30;
 }

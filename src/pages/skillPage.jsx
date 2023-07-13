@@ -2,7 +2,7 @@ import { useState } from "react";
 import ScrolliconGroup from "../components/scroll/ScrolliconGroup";
 import SkillCanvas from "../components/skill/Skillcanvas";
 import SkillDescription from "../components/skill/SkillDescription";
-import {MdClose} from "react-icons/md"
+import { MdClose } from "react-icons/md"
 const SkillPage = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const handleModal = () => {
@@ -13,12 +13,12 @@ const SkillPage = () => {
     <SkillCanvas onSkill={handleModal} />
     {modalOpen && <div className="skill_modal" >
       <div className="modal_head">
-      <h1 onClick={handleModal}>Main Skills</h1>
-      <button className="modal_close" onClick={handleModal}><MdClose/></button>
+        <h1 onClick={handleModal}>Main Skills</h1>
+        <button className="modal_close" onClick={handleModal}><MdClose /></button>
       </div>
-      <SkillDescription/>
+      <SkillDescription />
     </div>}
-   <ScrolliconGroup/>
+    <ScrolliconGroup />
   </section>;
 };
 

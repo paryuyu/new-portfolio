@@ -16,8 +16,7 @@ const dateFormat = (date) => {
 }
 
 const ProjectModal = ({ selectedItem, onClose }) => {
-  const { id, title, desc, webPage, github, period, images, skills, people } = selectedItem;
-  const [type, setType] = useState("");
+  const { id, title, desc, webPage, github, period, images, skills } = selectedItem;
 
   const handlePopup = (type) => {
     switch (type) {
