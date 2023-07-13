@@ -43,7 +43,7 @@ const ProjectPage = () => {
     <>
       <section className="project_section" id="project-section">
         <h1>Project</h1>
-        <p>아래에 게시된 프로젝트는 가장 최근에 작업한 작업물들로 이루어져있습니다.<br/>
+        <p>아래에 게시된 프로젝트는 가장 최근 작업물인 4건의 작업물로 이루어져있습니다.<br/>
          회사에 재직 시 작업했던 작업물은 보안상의 이유로 게시되지 않습니다.
         </p>
         <div className="cardcontainer">

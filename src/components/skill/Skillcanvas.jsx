@@ -12,8 +12,7 @@ const SkillCanvas = ({onSkill}) => {
     <ambientLight />
     <directionalLight intensity={0.5} />
     <CubeObj onSkill={onSkill} />
-    <ContactShadows frames={1} position={[0, -0.5, 0]} blur={1} position={[0, 0, 5]}
-    />
+    <ContactShadows frames={1} position={[0, -0.5, 0]} blur={1}/>
     <ContactShadows frames={1} position={[0, -0.5, 0]} blur={3} color="orange" />
     <OrbitControls minPolarAngle={1} maxPolarAngle={Math.PI / 1.1} />
     </Suspense>

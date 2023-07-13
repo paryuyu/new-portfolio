@@ -139,20 +139,23 @@ h1 > span {
   align-items:center;
 }
 
-.modal {
+.project_modal {
   position: absolute;
-  background:#fff;
-  border-radius: 8px;
+  background:#40404090;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  width:60vw;
-  height:60vh;
-  color:#333;
+  min-width:80vw;
+  min-height:85vh;
+  max-width:80vw;
+  max-height:85vh;
+  color:#ddd;
   padding:20px;
   box-sizing:border-box;
-  border:5px solid #a9c8e2a3;
-  z-index: 11;
+  z-index: 999;
   display:flex;
   flex-direction:column;
+  overflow-y:scroll;
+  display:flex;
+  
 }
 
 .backdrop {
@@ -168,23 +171,23 @@ h1 > span {
 
 .modal>button{
   border:0;
-  font-size:20px;
+  font-size:25px;
   position:absolute;
   display:flex;
   align-items:center;
   justify-content:center;
   padding:5px;
-  right:10px;
-  top: 10px;
+  right:2rem;
+  top: 2rem;
   border-radius:10px;
-  background:#a9c8e2a3;
   cursor:pointer;
   color:#fff;
+  background:#40404010;
 }
 
 
 .modal>button:hover{
-  background:#fff;
+  background:#ffffff60;
   color:#ddd;
 }
 
@@ -211,7 +214,7 @@ h1 > span {
 
 .navbar{
   margin-top:20px;
-  z-index:999;
+  z-index:100;
   width:95%;
   display:flex;
   justify-content: end;
@@ -357,9 +360,6 @@ h1 > span {
   overflow-y:scroll;
   cursor:default;
 }
-
-
-
 
 
 .description_section{
@@ -593,6 +593,91 @@ h1 > span {
 }
 
 
+.skill_item_description{
+  line-height:1.6;
+  font-family: 'S-CoreDream-3Light';
+}
+
+.project_skill_item{
+  background:#ffffff30;
+  padding:0.5rem 1rem;
+  border-radius:10px;
+}
+
+.project_skill_box{
+  display:flex;
+  flex-wrap:wrap;
+  gap:1rem;
+  align-items:center;
+}
+
+.project_modal_btn_head{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+}
+
+.project_modal_btn_head>button{
+  background:#00000000;
+  color:#ffffff95;
+  border:0;
+  font-size:2rem;
+  cursor:pointer;
+}
+
+.project_modal_btn_head>button:hover{
+  background:#00000000;
+  color:#ffffff50;
+}
+
+
+.project_modal_head{
+  display:flex;
+  justify-content:start;
+  align-items:center;
+  gap:1.5rem;
+}
+
+.project_modal_head>h1{
+  color: #00cc69;
+  margin:1rem;
+  padding:1rem;
+}
+
+.project_icon{
+  font-size:3rem;
+  opacity:0.9;
+  cursor:pointer;
+}
+
+.project_icon:hover{
+  color:#ffffff30
+}
+
+.project_desc{
+  font-weight:100;
+}
+
+.project_modal_big_section{
+  display:flex;
+  align-items:start;
+  gap:1rem;
+}
+
+.project_desc_section{
+  background:#35353550;
+  /* background:#ffffff50; */
+  padding:1rem;
+  flex:1;
+}
+
+.project_img_section{
+  background:#30303080;
+  /* width:100%; */
+  flex:1;
+}
+
+
 .skill_modal::-webkit-scrollbar {
   width: 0.5rem; /* 스크롤바의 너비 */
 }
@@ -607,7 +692,66 @@ h1 > span {
   background: #888; /* 스크롤바의 색상 */
 }
 
-.skill_item_description{
-  line-height:1.6;
-  font-family: 'S-CoreDream-3Light';
+
+::-webkit-scrollbar {
+  width: 0.5rem; /* 스크롤바의 너비 */
+}::-webkit-scrollbar-track {
+  background: #f1f1f1; /* 스크롤바 트랙의 배경색 */
+}::-webkit-scrollbar-thumb {
+  background: #555; /* 스크롤바에 호버될 때의 색상 */
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #888; /* 스크롤바의 색상 */
+}
+
+.img_btn{
+  color:#ffffff;
+  position:absolute;
+  top:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:0;
+  margin:0;
+  border:0;
+  background:#00000050;
+  font-size:1rem;
+  font-weight:100;
+  cursor:pointer;
+  padding:10px;
+  border-radius:10px;
+}
+
+.img_btn:hover{
+  background:#00000030;
+}
+
+.prev_btn{
+  left:2rem;
+}
+
+.next_btn{
+  right:2rem;
+}
+
+.img_box{
+  position:relative;
+  width:35rem;
+  height:30rem;
+  min-width:20rem;
+  min-height:15rem;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#35353550;
+  padding:1rem;
+  box-sizing:border-box;
+}
+
+.img_rect{
+  max-width:100%;
+  max-height: 100%;
+  object-fit:contain;
+  min-width:50%;
+  min-height: 50%;
 }
