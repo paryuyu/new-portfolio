@@ -30,6 +30,7 @@ const ProjectModal = ({ selectedItem, onClose }) => {
         break;
     }
   }
+  //깃허브 웹사이트 -> 모바일 버전 만들기.
 
   return <>
     <div className="backdrop" />
@@ -50,6 +51,10 @@ const ProjectModal = ({ selectedItem, onClose }) => {
             className="project_icon" />
         </div>
         <button onClick={onClose}><AiOutlineCloseCircle /></button>
+      </div>
+      <div className="project_mobile_btnbox">
+        <button className="project_mobile_btn" onClick={() => handlePopup("git")}><BsGithub/> 깃허브 바로가기</button>
+        <button className="project_mobile_btn" onClick={() => handlePopup("web")}><ImEarth/> 사이트 바로가기</button>
       </div>
       <div className="project_modal_big_section">
         <div className="project_desc_section">
