@@ -946,7 +946,10 @@ h1 > span {
   font-size:30px;
 }
 
-
+.img_loading{
+  width:12rem;
+  text-align:center;
+}
 
 @media(min-width:600px){
 
@@ -1212,7 +1215,7 @@ h1 > span {
   min-width:100%;
   min-height: 15rem;
   object-fit: contain;
-  box-sizing:border-box;
+  box-sizing: border-box;
  }
 
  .img_btn{
