@@ -28,7 +28,7 @@ html,
 body,
 #root,
 .bg {
-  font-family: 'S-CoreDream-3Light';
+  font-family:'S-CoreDream-3Light';
   margin: 0;
   padding: 0;
   width: 100%;
@@ -493,7 +493,6 @@ h1 > span {
   font-size:2rem;
   box-sizing:border-box;
   color:#fff;
-
 }
 
 .scroll_down_icon:hover{
@@ -653,14 +652,18 @@ h1 > span {
   display:flex;
   justify-content: space-between;
   align-items:center;
+  width:100%;
+  box-sizing:border-box;
 }
 
 .project_modal_btn_head>button{
   background:#00000000;
   color:#ffffff95;
   border:0;
-  font-size:2rem;
+  font-size:3rem;
   cursor:pointer;
+  padding:0;
+  display:flex;
 }
 
 .project_modal_btn_head>button:hover{
@@ -779,7 +782,7 @@ h1 > span {
   display:flex;
   justify-content:center;
   align-items:center;
-  background:#35353550;
+  margin:auto;
   padding:1rem;
   box-sizing:border-box;
 }
@@ -883,21 +886,37 @@ h1 > span {
   background:#dddddd30;
 }
 
+.intro_icon{
+  position:absolute;
+  bottom:10%;
+  right:10%;
+  text-decoration:none;
+  text-align:center;
+  font-size:15px;
+}
+
+
+
 @media(min-width:600px){
+
  .project_mobile_btnbox{
    display:none;
  }
+ 
  .about_mobile_down{
    display:none
   }
 }
+
 @media(max-width:600px){
+ 
+
   .navbar{
     font-size:15px;
     padding-top:5px;
     margin:0;
     width:100%;
-    background:#000000;
+    background:#303030cc;
     margin-right:1rem;
   }
 
@@ -931,6 +950,7 @@ h1 > span {
   .main_tab_screen {
     width: 90vw;
     height: 75%;
+
   }
 
   .scroll_container{
@@ -948,7 +968,7 @@ h1 > span {
   }
 
   .main_tab_screen>nav>ul>li{
-    font-size:15px;
+    font-size:14px;
   }
 
   .icon_up_box{
@@ -1037,11 +1057,11 @@ h1 > span {
   .project_modal{
     position:fixed;
     padding:0;
-    min-width: 90vw;
-    min-height: 90vh;
-    max-width: 90vw;
-    max-height: 90vh;
-    top:7%;
+    min-width: 80vw;
+    min-height: 80vh;
+    max-width: 95vw;
+    max-height: 80vh;
+    top:12%;
   }
 
   .project_modal_head{
@@ -1056,9 +1076,16 @@ h1 > span {
 
   .project_modal_btn_head{
     gap:0;
-    justify-content:center;
+    justify-content:space-between;
     padding:1rem;
   }
+
+  .project_modal_btn_head>button{
+    gap:0;
+    justify-content:center;
+    font-size:2rem;
+  }
+
 
   .project_modal_head>h1{
     font-size:30px;
@@ -1149,8 +1176,6 @@ h1 > span {
   border-radius:10px;
   color:#fff;
   text-decoration:none;
-
-
 }
 
 .about_mobile_down:hover{

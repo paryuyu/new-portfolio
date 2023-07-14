@@ -2,8 +2,9 @@ import { motion } from "framer-motion";
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { ImEarth } from "react-icons/im";
 import { BsGithub } from "react-icons/bs";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import ProjectImage from "./ProjectImage";
+import CanvasLoader from "../canvas/Loader";
 
 const dateFormat = (date) => {
   let day = new Date(date);
@@ -52,8 +53,8 @@ const ProjectModal = ({ selectedItem, onClose }) => {
         <button onClick={onClose}><AiOutlineCloseCircle /></button>
       </div>
       <div className="project_mobile_btnbox">
-        <button className="project_mobile_btn" onClick={() => handlePopup("git")}><BsGithub/> 깃허브 바로가기</button>
-        <button className="project_mobile_btn" onClick={() => handlePopup("web")}><ImEarth/> 사이트 바로가기</button>
+        <button className="project_mobile_btn" onClick={() => handlePopup("git")}><BsGithub /> 깃허브 바로가기</button>
+        <button className="project_mobile_btn" onClick={() => handlePopup("web")}><ImEarth /> 사이트 바로가기</button>
       </div>
       <div className="project_modal_big_section">
         <div className="project_desc_section">
@@ -71,8 +72,10 @@ const ProjectModal = ({ selectedItem, onClose }) => {
 
 
         <div className="project_img_section">
-          <ProjectImage images={images}/>
-        </div>  
+          <Suspense fallback={<CanvasLoader />}>
+            <ProjectImage images={images} />
+          </Suspense>
+        </div>
       </div>
     </motion.div>
   </>;

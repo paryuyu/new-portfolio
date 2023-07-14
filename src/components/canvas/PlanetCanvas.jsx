@@ -26,15 +26,15 @@ const Planet = () => {
 
   return <mesh ref={meshRef}>
     <hemisphereLight intensity={0.15} groundColor="#333" />
-    <SpotLight
+    {!isMobile && <SpotLight
       position={[10, 10, 20]}
       angle={4}
       penumbra={1}
       intensity={1}
       castShadow
-      shadow-mapSize={10} />
+      shadow-mapSize={10} />}
     <pointLight intensity={100} />
-    <primitive object={earth.scene} scale={isMobile ? 1:2} position={[5, -1, 1]}  />
+    <primitive object={earth.scene} scale={isMobile ? 1:2} position={isMobile? [1,-0.8,1] : [5, -1, 1]}  />
   </mesh>;
 };
 
