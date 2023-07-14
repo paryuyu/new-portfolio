@@ -1,8 +1,9 @@
-import React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 import { RxDoubleArrowLeft , RxDoubleArrowRight} from "react-icons/rx";
 const ProjectImage = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
 
   const goToPreviousImage = () => {
     if (currentIndex > 0) {

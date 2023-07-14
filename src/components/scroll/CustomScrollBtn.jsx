@@ -10,7 +10,7 @@ const CustomScrollBtn = ({ type }) => {
         break;
 
       case "up":
-        setPage("/")
+        setPage("/new-portfolio")
         break;
       default:
         break;

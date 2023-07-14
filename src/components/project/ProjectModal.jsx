@@ -30,7 +30,6 @@ const ProjectModal = ({ selectedItem, onClose }) => {
         break;
     }
   }
-  //깃허브 웹사이트 -> 모바일 버전 만들기.
 
   return <>
     <div className="backdrop" />
