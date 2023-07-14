@@ -4,6 +4,7 @@ import CustomScrollBtn from "../components/scroll/CustomScrollBtn";
 import HeadingTypo from "../components/aboutme/headingTypo";
 import AboutMeContent from "../components/aboutme/AboutMeContent";
 import { aboutMeContent } from "../libs/aboutme";
+import { RxDoubleArrowDown } from "react-icons/rx";
 
 
 const AboutPage = () => {
@@ -40,8 +41,11 @@ const AboutPage = () => {
       </nav>
       <AboutMeContent selectedTab={selectedTab} />
     </div>
-    <CustomScrollBtn type="up"/>
-    <CustomScrollBtn type="down"/>
+    <CustomScrollBtn type="up" />
+    <CustomScrollBtn type="down" />
+    <a className="about_mobile_down" href="#skill-section">
+      <RxDoubleArrowDown className="about_mobile_down" />
+    </a>
   </section>;
 };
 

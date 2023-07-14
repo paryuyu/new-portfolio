@@ -5,6 +5,25 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Tenada';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Tenada.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CWDangamAsac-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/CWDangamAsac-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.about_headtext{
+  font-family:CWDangamAsac-Bold;
+}
+
 html,
 body,
 #root,
@@ -16,6 +35,7 @@ body,
   height: 100%;
   color:white;
 }
+
 
 #root{
   position:relative;
@@ -381,6 +401,7 @@ h1 > span {
   flex-direction:row;
   gap:0px;
   margin:0;
+  padding-top:2rem;
   cursor:default;
   margin: 0 auto;
   margin-top:5rem;
@@ -389,6 +410,8 @@ h1 > span {
 .about_headtext>h1{
   color:#fff;
   margin:0;
+  padding:0;
+
 }
 
 .scroll_outline{
@@ -864,6 +887,9 @@ h1 > span {
  .project_mobile_btnbox{
    display:none;
  }
+ .about_mobile_down{
+   display:none
+  }
 }
 @media(max-width:600px){
   .navbar{
@@ -883,6 +909,10 @@ h1 > span {
 
   .main_section_title>.main_title{
     font-size:3rem;
+  }
+
+  .about_headtext{
+    padding:0;
   }
 
   .about_headtext>h1{
@@ -905,8 +935,7 @@ h1 > span {
 
   .main_tab_screen>.content_box {
     padding:0.7rem;
-    height:100%;
-
+    height:70%;
   }
 
   .main_tab_screen>.content_box>div {
@@ -1076,6 +1105,7 @@ h1 > span {
    font-size:12px;
    padding:0.5rem;
  }
+
  .contact_modal {
   min-width:90vw;
   max-height:50vh;
@@ -1104,6 +1134,27 @@ h1 > span {
 .contact-icon{
   font-size:35px;
   padding:0.7rem;
+}
+
+.about_mobile_down{
+  position:absolute;
+  bottom:5%;
+  right:10%; 
+  font-size:30px;
+  padding:5px;
+  border-radius:10px;
+  color:#fff;
+  text-decoration:none;
+
+
+}
+
+.about_mobile_down:hover{
+  background:#dddddd70;
+}
+
+.about_mobile_down_text{
+  font-size:10px;
 }
 
 }
