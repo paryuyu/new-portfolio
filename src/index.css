@@ -1052,7 +1052,7 @@ h1 > span {
 
   .project_modal_btn_head{
     gap:0;
-    jutify-content:center;
+    justify-content:center;
     padding:1rem;
   }
 
