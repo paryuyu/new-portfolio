@@ -24,8 +24,6 @@ const ProjectImage = ({ images }) => {
     </Suspense>
     <button onClick={goToNextImage} className="next_btn img_btn">다음<RxDoubleArrowRight/></button>
   </div>
-
-    ;
 };
 
 export default ProjectImage;

@@ -20,7 +20,13 @@ const IntroPage = () => {
       {isMobile ? <span className="sub_title">Welcome <br />to <br />my portfolio site!</span> : <span className="sub_title ">Welcome to my portfolio site!</span>}
     </h1>
     <PlanetCanvas />
-    <a href="#about-section" className="scroll_down_icon intro_icon"><p className="small_text">다음페이지로<br/>이동</p><BsChevronDoubleDown className="scroll_down_icon"/></a>
+    <a href="#about-section" 
+    className="intro_icons">
+      <p className="small_text">
+        다음페이지로<br />
+        이동</p>
+      <BsChevronDoubleDown className="intro_icon" />
+    </a>
   </section>
 };
 

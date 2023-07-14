@@ -50,9 +50,18 @@ const ContactPage = () => {
   }
 
   return <section id="contact-section" className="contact_section">
-    <FiMail className='contact-icon' onClick={handleMail} />
-    <FiGithub className='contact-icon' onClick={handleGithub} />
-    <FiPhone className='contact-icon' onClick={handleCallModal} />
+    <div className='contact_section_headbox'>
+      <h1 className='contact_section_title'>Contact</h1>
+      <p className='contact_section_desc'>메일과 깃허브, 전화번호를 제공하는 페이지입니다.<br/>
+        포트폴리오를 보시고 관심이 가신다면 편하게 연락주세요 🚀 </p>
+    </div>
+    
+    <div className='contact_icons'>
+      <FiMail className='contact-icon' onClick={handleMail} />
+      <FiGithub className='contact-icon' onClick={handleGithub} />
+      <FiPhone className='contact-icon' onClick={handleCallModal} />
+    </div>
+
     {isModal &&
       <>
         <div className='backdrop' onClick={() => { setModal(false) }} />

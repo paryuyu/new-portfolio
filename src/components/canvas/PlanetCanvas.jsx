@@ -6,8 +6,8 @@ import { useRef } from "react";
 import { Suspense } from "react";
 import CanvasLoader from "./Loader";
 
-const Planet = () => {
-  const [isMobile,setMobile] = useState(false); //모바일크기 => true
+const Planet = ({isMobile}) => {
+  
   const meshRef = useRef();
   const earth = useGLTF('./planet/scene.gltf');
 
@@ -16,13 +16,6 @@ const Planet = () => {
       meshRef.current.rotation.x += 0.01 * delta
     }
   })
-
-  useEffect(()=>{
-    const isMediaQuery = window.matchMedia('(max-width:600px)'); 
-    setMobile(isMediaQuery.matches);
-  },[])
-  
-  
 
   return <mesh ref={meshRef}>
     <hemisphereLight intensity={0.15} groundColor="#333" />
@@ -38,7 +31,15 @@ const Planet = () => {
   </mesh>;
 };
 
+
+
 const PlanetCanvas = () => {
+  const [isMobile,setMobile] = useState(false); //모바일크기 => true
+
+  useEffect(()=>{
+    const isMediaQuery = window.matchMedia('(max-width:600px)'); 
+    setMobile(isMediaQuery.matches);
+  },[])
 
   return (
     <Canvas
@@ -55,8 +56,8 @@ const PlanetCanvas = () => {
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} rotateSpeed={0.2} />
-        <Planet />
+        <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} rotateSpeed={isMobile ? 1 : 0.2} />
+        <Planet isMobile={isMobile}/>
       </Suspense>
       <Preload all />
     </Canvas>

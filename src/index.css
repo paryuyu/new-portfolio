@@ -490,43 +490,47 @@ h1 > span {
 }
 
 .scroll_down_icon{
-  font-size:2rem;
+  font-size:30px;
   box-sizing:border-box;
   color:#fff;
+  width: 8rem;
 }
 
-.scroll_down_icon:hover{
+.icon_box:hover,
+.icon_up_box:hover{
   background:#d0d0d030;
-  padding:3px;
   border-radius:10px;
   cursor:pointer;
 }
 
 
 .icon_box{
- text-align:center;
+  padding:3px;
+  text-align:center;
   z-index: 800;
   position:absolute;
   right:4rem;
   bottom:20%;
+  width: 8rem;
 }
 
 .icon_text{
   font-weight:100;
 }
 
-
-.icon_text{
-  font-weight:100;
-}
 
 .icon_up_box{
+  padding:3px;
   text-align:center;
-   z-index: 800;
-   position:absolute;
-   right:4.5rem;
-   top:20%;
- 
+  z-index: 800;
+  position:absolute;
+  right:4.5rem;
+  top:20%;
+}
+
+.nav_link{
+  color:#fff;
+  text-decoration:none;
 }
 
 .skill_description_outline{
@@ -798,12 +802,30 @@ h1 > span {
 
 .contact_section{
   height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:1rem;
-
+  width:100vw;
 }
+
+.contact_icons{
+  height:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:1rem;
+}
+
+.contact_section_headbox{
+  margin:0;
+  padding:1rem;
+}
+
+.contact_section_title{
+  margin:0;
+  padding:5rem 0rem 0rem 5rem;
+}
+.contact_section_desc{
+  padding:2rem 0rem 0rem 5rem; 
+}
+
 .contact-icon{
   background:#d0d0d050;
   font-size:3rem;
@@ -812,14 +834,13 @@ h1 > span {
   cursor:pointer;
 }
 
-
 .contact-icon:hover{
   background:#ffffff30;
 }
 
 .contact_modal{
-  font-family: 'S-CoreDream-3Light';
-  position: absolute;
+  position: fixed;
+  z-index: 999;
   background:#40404090;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   min-width:30vw;
@@ -827,13 +848,14 @@ h1 > span {
   max-width:30vw;
   max-height:40vh;
   color:#ddd;
-  padding:20px;
   box-sizing:border-box;
-  z-index: 999;
+  overflow-y:hidden;
+  padding:20px;
+  transform:translate(-50%,-50%);
+  top:50%;
+  left:50%;
   display:flex;
   flex-direction:column;
-  overflow-y:hidden;
-  display:flex;
 }
 
 .contact_modal>h2{
@@ -882,17 +904,24 @@ h1 > span {
   border-radius:5px;
 }
 
-.mail:hover,.github:hover{
+.mail:hover,.github:hover,.intro_icons:hover{
   background:#dddddd30;
 }
 
-.intro_icon{
+.intro_icons{
   position:absolute;
   bottom:10%;
   right:10%;
   text-decoration:none;
   text-align:center;
   font-size:15px;
+  color:#fff;
+  padding:5px;
+  border-radius:10px;
+}
+
+.intro_icon{
+  font-size:30px;
 }
 
 
@@ -916,7 +945,7 @@ h1 > span {
     padding-top:5px;
     margin:0;
     width:100%;
-    background:#303030cc;
+    background:#171717;
     margin-right:1rem;
   }
 
@@ -973,15 +1002,18 @@ h1 > span {
 
   .icon_up_box{
     font-size:12px;
-    right: 2rem;
+    right: 0.5rem;
     top: 10%;
+    width:8rem;
   }
 
   .icon_box{
     bottom:10%;
     font-size:12px;
-    right: 2rem;
+    right: 0.5rem;
+    width:8rem;
   }
+
   .skill_modal{
     padding:0;
     background:#303030;
@@ -1014,8 +1046,9 @@ h1 > span {
  
   .skill_item_title{
     text-align:center;
-    font-size:25px;
+    font-size:20px;
     margin:0;
+    text-decoration:none;
     padding:0.5rem;
   }
 
@@ -1186,4 +1219,39 @@ h1 > span {
   font-size:10px;
 }
 
+.contact_icons{
+  height:30%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.contact_section_headbox{
+  margin:0;
+  margin-top: 5rem;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.contact_section_title{
+  margin:0;
+  padding:0;
+}
+
+.contact_section_desc{
+  font-size:13px;
+  padding:0;
+  padding-top:1rem;
+  text-align:center;
+}
+
+
+.skill_item_description{
+  font-size:13px;
+}
+.contact_section_title{
+  font-size:50px;
+  color:#00cc69;
+}
 }
