@@ -53,7 +53,7 @@ export const projectItem = [
   },
   {
     id: 4,
-    title: "Portfolio",
+    title: "Resume",
     desc: "12버전의 NextJs로 진행된 프로젝트입니다. 현재 사이트인 포트폴리오 사이트와 달리 개발공부를 시작하고 진행했던 모든 토이프로젝트를 확인해보실 수 있습니다. 반응형을 고려하고 제작된 사이트입니다. 모바일에서도 편하게 보실 수 있습니다. UI는 MUI와 기본 CSS로 제작되었습니다.",
     webPage: "https://yuyu-resume-developer.vercel.app/",
     github: "",
