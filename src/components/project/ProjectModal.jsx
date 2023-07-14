@@ -72,9 +72,7 @@ const ProjectModal = ({ selectedItem, onClose }) => {
 
 
         <div className="project_img_section">
-          <Suspense fallback={<CanvasLoader />}>
-            <ProjectImage images={images} />
-          </Suspense>
+          <ProjectImage images={images} />
         </div>
       </div>
     </motion.div>

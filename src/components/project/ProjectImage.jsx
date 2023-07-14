@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import { useState } from "react";
 import { RxDoubleArrowLeft , RxDoubleArrowRight} from "react-icons/rx";
 const ProjectImage = ({ images }) => {
@@ -16,12 +16,12 @@ const ProjectImage = ({ images }) => {
       setCurrentIndex(currentIndex + 1);
     }
   };
-
-  console.log(images[currentIndex])
   
   return <div className="img_box">
     <button onClick={goToPreviousImage} className="prev_btn img_btn"><RxDoubleArrowLeft/>이전</button>
+    <Suspense fallback={<div className="img_rect">loading...</div>}>
     <img src={images[currentIndex]} alt="project" className="img_rect"/>
+    </Suspense>
     <button onClick={goToNextImage} className="next_btn img_btn">다음<RxDoubleArrowRight/></button>
   </div>
 
