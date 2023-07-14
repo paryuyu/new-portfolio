@@ -12,8 +12,7 @@ const SkillCanvas = ({onSkill}) => {
     <ambientLight />
     <directionalLight intensity={0.5} />
     <CubeObj onSkill={onSkill} />
-    <ContactShadows frames={1} position={[0, -0.5, 0]} blur={1}/>
-    <ContactShadows frames={1} position={[0, -0.5, 0]} blur={3} color="orange" />
+    <ContactShadows frames={1} position={[0, -0.5, 0]} blur={3} />
     <OrbitControls minPolarAngle={1} maxPolarAngle={Math.PI / 1.1} />
     </Suspense>
   </Canvas>;
@@ -30,7 +29,7 @@ const CubeObj = ({ onSkill }) => {
   })
   return (
     <group >
-      <Cloud speed={0.01} depth={2} opacity={0.5} />
+      <Cloud speed={0.01} depth={5} opacity={0.5} />
       <mesh onPointerEnter={() => setHovered(true)} onPointerLeave={() => setHovered(false)} onClick={onSkill} position={[0, 0, 0]} ref={GroupRef}>
         <boxGeometry scale={0.5} />
         <meshStandardMaterial>
@@ -39,7 +38,7 @@ const CubeObj = ({ onSkill }) => {
             <color attach="background" args={[hovered ? 'peru' : '#aaa']} />
             <ambientLight intensity={0.5} />
             <directionalLight position={[1, 10, 2]} />
-            <Text ref={TextRef} fontSize={4} color={hovered ? "#fff" : "#333"} font="/fonts/RubikDirt.ttf">
+            <Text ref={TextRef} fontSize={4} color={hovered ? "#fff" : "#333"} font={"./fonts/RubikDirt.ttf"}>
               Skillbox
             </Text>
           </RenderTexture>

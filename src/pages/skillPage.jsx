@@ -11,9 +11,13 @@ const SkillPage = () => {
 
   return <section className="skill_section" id="skill-section">
     <SkillCanvas onSkill={handleModal} />
-    {modalOpen && <div className="skill_modal" >
+
+    {modalOpen && 
+    <div className="skill_modal" >
       <div className="modal_head">
         <h1 onClick={handleModal}>Main Skills</h1>
+        <p></p>
+
         <button className="modal_close" onClick={handleModal}><MdClose /></button>
       </div>
       <SkillDescription />
