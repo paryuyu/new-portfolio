@@ -896,6 +896,9 @@ h1 > span {
     font-size:15px;
     padding-top:5px;
     margin:0;
+    width:100%;
+    background:#000000;
+    margin-right:1rem;
   }
 
   .main_section_title{
@@ -922,6 +925,7 @@ h1 > span {
 
   .listbox{
     gap:0.5rem;
+    padding-right:1rem;
   }
 
   .main_tab_screen {
