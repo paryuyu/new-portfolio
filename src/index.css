@@ -331,9 +331,10 @@ h1 > span {
 .main_tab_screen>.content_box{
   background:#30303050;
   width:100%;
+  height:100%;
   min-height:50vh;
   border-radius:10px;
-  margin-top:1rem;
+  /* margin-top:0rem; */
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -343,6 +344,7 @@ h1 > span {
   line-height:2;
   text-align:center;
   overflow-y: scroll;
+  
 }
 
 .main_tab_screen>.content_box::-webkit-scrollbar {
@@ -633,7 +635,7 @@ h1 > span {
 .modal_head>p{
   margin-top:2rem;
   text-align:left;
-  padding-bottom:1rem;
+  padding:1rem 1rem;
   line-height:1.2rem;
 }
 
@@ -719,6 +721,8 @@ h1 > span {
 
 .project_desc{
   font-weight:100;
+  font-size:16px;
+  line-height:1.6rem;
 }
 
 .project_modal_big_section{
@@ -956,7 +960,11 @@ h1 > span {
 }
 
 @media(max-width:600px){
- 
+  .project_desc{
+    font-size:14px;
+    line-height:1.2rem;
+  }
+  
 
   .modal_close{
     top:1rem;
@@ -1027,6 +1035,11 @@ h1 > span {
     text-align:left;
   }
 
+  .main_tab_screen>.content_box>div>p {
+    height:100%;
+    font-size:15px;
+  }
+  
   .main_tab_screen>nav>ul>li{
     font-size:14px;
   }
@@ -1049,6 +1062,7 @@ h1 > span {
     padding:0;
     background:#303030;
   }
+
   .modal_head{
     padding:1.5rem;
     font-size:12px;
