@@ -17,7 +17,7 @@ export const projectItem = [
     desc: "react-three-fiber와 react-three-drei를 통해 3D 모델을 구현하였습니다. 새로운 스타일로 만들어보고자 노력했습니다. 단독으로 진행한 프로젝트입니다.",
     webPage: "https://paryuyu.github.io/new-portfolio/",
     github: "https://github.com/paryuyu/new-portfolio.git",
-    period: ["2023-07-10", "2023-07-13"],
+    period: ["2023-07-10", "2023-07-14"],
     images: ["./project-image/newportfolio/new1.png",
       "./project-image/newportfolio/new2.png",
       "./project-image/newportfolio/new3.png",
