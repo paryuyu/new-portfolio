@@ -17,9 +17,7 @@ const SkillPage = () => {
         <div className="modal_head">
         <button className="modal_close" onClick={handleModal}><MdClose /></button>
           <h1 onClick={handleModal}>Main Skills</h1>
-          <p>저의 메인 스킬들을 정리한 내용입니다.<br />
-            해당 스킬들을 주로 사용하고 있으며, 이외에도 성장을 위해 열심히 학습하고 있습니다.<br />
-            초록색바로 나타낸 것은 제가 다룰 수 있는 정도를 나타낸 레벨입니다.<br />참고해주세요.
+          <p>현재 제가 다룰 수 있는 기술들을 정리한 것 입니다. 참고용으로 봐주세요. 레벨도 함께 기술해놓았습니다. 꾸준히 학습하고 노력하고 있다는 점을 고려하여 봐주시길 바랍니다.
           </p>
         </div>
         <SkillDescription />
