@@ -329,7 +329,6 @@ h1 > span {
 }
 
 .main_tab_screen>.content_box{
-  font-family: 'S-CoreDream-3Light';
   background:#30303050;
   width:100%;
   min-height:50vh;
@@ -422,8 +421,8 @@ h1 > span {
   display:flex;
   justify-content:center;
   position:absolute;
-  bottom:20%;
-  right:4rem;
+  bottom:20%;  
+  right:7%;
   z-index:999;
 }
 
@@ -436,7 +435,7 @@ h1 > span {
   justify-content:center;
   position:absolute;
   top:27%;
-  right:4rem;
+  right:7%;
   z-index:999;
 }
 
@@ -562,7 +561,7 @@ h1 > span {
 }
 
 .skill_category_box{
-  background:#00000060;
+  background:#00000080;
   border-bottom: 1px dashed #ffffff50;
   padding-bottom:1rem;
 }
@@ -598,7 +597,7 @@ h1 > span {
 
 .modal_close{
   background:#d1d1d150;
-  padding:1rem;
+  padding:0.5rem;
   border:0;
   border-radius:50%;
   font-size:3rem;
@@ -607,6 +606,10 @@ h1 > span {
   align-items:center;
   color:#303030;
   cursor:pointer;
+  position:absolute;
+  top:-1rem;
+  margin:0;
+  right:0rem;
 }
 
 .modal_close:hover{
@@ -615,22 +618,32 @@ h1 > span {
 }
 
 .modal_head{
+  position:relative;
   display:flex;
+  flex-direction:column;
   justify-content:space-between;
   align-items:center;
   padding:3rem 2rem;
+}
+
+.modal_head>p{
+  margin-top:2rem;
+  text-align:center;
+  background:#00000090;
+  padding:1rem;
+  line-height:1.2rem;
 }
 
 .skill_modal>.modal_head>h1{
   color:#05ff05;
   cursor:pointer;
   margin:0;
+  padding:0;
 }
 
 
 .skill_item_description{
   line-height:1.6;
-  font-family: 'S-CoreDream-3Light';
 }
 
 .project_skill_item{
@@ -638,6 +651,7 @@ h1 > span {
   padding:0.5rem 1rem;
   border-radius:10px;
 }
+
 .project_datebox{
   display:flex;
   align-items:center;
@@ -941,6 +955,11 @@ h1 > span {
 @media(max-width:600px){
  
 
+  .modal_close{
+    top:1rem;
+    right:1rem;
+  }
+
   .navbar{
     font-size:15px;
     padding-top:5px;
@@ -965,6 +984,10 @@ h1 > span {
 
   .about_headtext{
     padding:0;
+    margin-top:4rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
   }
 
   .about_headtext>h1{
@@ -995,6 +1018,10 @@ h1 > span {
   .main_tab_screen>.content_box>div {
     height:100%;
     font-size:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:left;
   }
 
   .main_tab_screen>nav>ul>li{
@@ -1020,13 +1047,13 @@ h1 > span {
     background:#303030;
   }
   .modal_head{
-    padding:2rem;
-    font-size:10px;
+    padding:1.5rem;
+    font-size:12px;
     border-bottom:1px solid #fff;
   }
 
   .skill_modal>.modal_head>h1{
-    padding:1rem;
+    margin-top:0.5rem;
     font-size:35px;
     padding:0;
   }
@@ -1256,3 +1283,5 @@ h1 > span {
   color:#00cc69;
 }
 }
+
+::selection { background:#00cc69; }
