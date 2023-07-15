@@ -18,7 +18,7 @@ const ProjectImage = ({ images }) => {
   };
 
   return <div className="img_box">
-    {images && images?.length > 0 ?
+    {images[currentIndex] ?
       <Suspense fallback={null}>
         <button onClick={goToPreviousImage} className="prev_btn img_btn"><RxDoubleArrowLeft />이전</button>
         <img src={images[currentIndex]} alt="project" className="img_rect" />
