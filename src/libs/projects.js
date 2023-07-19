@@ -33,7 +33,7 @@ export const projectItem = [
     desc: "이전 클론코딩을 통해 학습한 NextJs의 13버전을 이용해 만들었습니다. MongoDB를 통하여 CRUD를 구현하였으며, 서버는 Nextjs를 이용하였습니다. 부족하지만 SEO구현에 최선을 다하였습니다. Next-auth를 통해 카카오 소셜 로그인을 구현하였습니다. 반응형으로 구현하였으니 모바일에서도 편하게 방문해주세요. 1인으로 진행된 단독 프로젝트입니다. 첫 로딩에 약간의 시간이 소요됩니다.",
     webPage: "https://00blog.vercel.app",
     github: "https://github.com/paryuyu/00blog.git",
-    period: ["2023-06-28", "2023-07-10"],
+    period: ["2023-06-28", "2023-07-07"],
     images: ["./project-image/blog/blog1.png", "./project-image/blog/blog2.png", "./project-image/blog/blog3.png"],
     skills: ["Next.js", "MongoDB", "GitHub", "Tailwind CSS", "JavaScript", "react-quill"],
     people: "단독 프로젝트"
