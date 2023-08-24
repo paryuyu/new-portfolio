@@ -1,9 +1,9 @@
 import { Tilt } from "react-tilt";
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import React, { Suspense, lazy, useEffect, useState } from "react";
 import { defaultOptions, projectItem } from "../libs/projects";
-import ProjectModal from "../components/project/ProjectModal";
 
+// const LazyProjectModal = lazy(()=>import("../components/project/ProjectModal"));
 
 const limitStringWithEllipsis = (str) => {
   if (str.length <= 140) {
@@ -12,7 +12,13 @@ const limitStringWithEllipsis = (str) => {
     return str.slice(0, 140) + "...";
   }
 }
+function lazyWithPreload (importFn){
+  const Component = React.lazy(importFn);
+  Component.preload = importFn
+  return Component;
+}
 
+const LazyProjectModal = lazyWithPreload(()=>import("../components/project/ProjectModal"));
 
 const Card = ({ item, onSelect, isSelected }) => {
   const { id, title, desc } = item;
@@ -40,8 +46,14 @@ const Card = ({ item, onSelect, isSelected }) => {
   );
 };
 
+
+
 const ProjectPage = () => {
   const [selectedItem, setSelectedItem] = useState(null);
+
+  useEffect(()=>{
+    LazyProjectModal.preload();
+  },[])
 
   const handleSelectItem = (item) => {
     setSelectedItem(item);
@@ -69,9 +81,11 @@ const ProjectPage = () => {
             />
           ))}
           <AnimatePresence>
+            <Suspense fallback={null}>
             {selectedItem && (
-              <ProjectModal selectedItem={selectedItem} onClose={handleCloseModal} />
+              <LazyProjectModal selectedItem={selectedItem} onClose={handleCloseModal} />
             )}
+            </Suspense>
           </AnimatePresence>
 
         </div>
