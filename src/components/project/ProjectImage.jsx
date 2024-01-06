@@ -4,7 +4,7 @@ import { RxDoubleArrowLeft, RxDoubleArrowRight } from "react-icons/rx";
 
 const ProjectImage = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  console.log(images, 'images...')
+  //console.log(images, 'images...')
 
   const goToPreviousImage = () => {
     if (currentIndex > 0) {

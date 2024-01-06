@@ -16,6 +16,7 @@ const CustomScrollBtn = ({ type }) => {
         break;
     }
   }, [])
+  
   return <a href={page} className={"scroll_container"}>
     <div className={type === "down" ? "scroll_outline":"scroll_up_outline"}>
       <div className={type === "down" ? "scroll_inline":"scroll_up_inline"}></div>

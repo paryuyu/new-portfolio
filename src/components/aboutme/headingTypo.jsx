@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 const HeadingTypo = ({ children, colorSet, onSelect }) => {
-  console.log(colorSet)
+  //console.log(colorSet)
 
 
   return <motion.h1

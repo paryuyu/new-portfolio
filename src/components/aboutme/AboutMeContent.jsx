@@ -2,7 +2,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { aboutMeContent } from "../../libs/aboutme";
 const AboutMeContent = ({ selectedTab }) => {
-  console.log( aboutMeContent[aboutMeContent.length-1] )
 
   return <AnimatePresence>
     <motion.div

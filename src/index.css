@@ -981,6 +981,7 @@ h1 > span {
     width:100%;
     background:#171717;
     margin-right:1rem;
+    top:0;
   }
 
   .main_section_title{

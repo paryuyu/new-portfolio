@@ -1,5 +1,7 @@
 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainBackground from "./components/main/MainBackground";
+import NavBar from "./components/nav/Navbar";
 import AboutPage from "./pages/aboutPage";
 import ContactPage from "./pages/contactPage";
 import ProjectPage from "./pages/projectPage";
@@ -10,13 +12,17 @@ const App = () => {
 
   return (
     <>
-      <MainBackground />
-      <div className="description_page">
-      <AboutPage />
-      <SkillPage />  
-      <ProjectPage />
-      <ContactPage />
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/new-portfolio" element={<NavBar />}>
+            <Route path="/new-portfolio" element={<MainBackground />} />
+            <Route path="/new-portfolio/about-me" element={<AboutPage />} />
+            <Route path="/new-portfolio/skill" element={<SkillPage />} />
+            <Route path="/new-portfolio/project" element={<ProjectPage />} />
+            <Route path="/new-portfolio/contact" element={<ContactPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   )
 };

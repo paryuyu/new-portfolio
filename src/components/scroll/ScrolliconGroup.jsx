@@ -2,7 +2,7 @@ import { BsChevronDoubleDown, BsChevronDoubleUp } from "react-icons/bs";
 
 const ScrolliconGroup = () => {
   return <>
-    <span className="icon_up_box">
+    {/* <span className="icon_up_box">
       <a href="#about-section" className="nav_link">
         <span className="icon_text">
           <BsChevronDoubleUp className="scroll_down_icon" />
@@ -18,7 +18,7 @@ const ScrolliconGroup = () => {
           바로가기<br />
           <BsChevronDoubleDown className="scroll_down_icon" />
         </span></a>
-    </span>
+    </span> */}
 
   </>;
 };

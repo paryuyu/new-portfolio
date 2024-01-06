@@ -23,7 +23,6 @@ const SkillPage = () => {
         </div>
         <SkillDescription />
       </div>}
-    <ScrolliconGroup />
   </section>;
 };
 
